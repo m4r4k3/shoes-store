@@ -1,0 +1,81 @@
+section{
+    min-height: calc(100vh - 60px);
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    gap:30px ;
+    padding-top: 20px;
+}
+.product{
+    width:  80%;
+    height: 80px;
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
+    display:flex;
+}
+.info{
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+.img img{
+    width: 50px;
+    border-radius: 5px;
+}
+.label p {
+    font-size: 20px;
+    font-weight: 900;
+}
+.price p {
+    font-size: 18px ;
+    font-weight: 900;
+}
+.price p::after {
+    content: "$";
+
+}
+#qte{
+    width: 50px;
+    outline: 0;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+#order{
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    outline: 0;
+    box-shadow: 0 0 5px black;
+    cursor: pointer;
+    color: white;
+    background-color: #062A40;
+    font-size: 18px;
+    font-weight: 900;
+    border: 0;
+}
+.x{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:50px ;
+    }
+.fa-x{
+    cursor: pointer;
+    width: 25px;
+    height:25px;
+    background-color: rgb(255, 61, 61);
+    color: white;
+    text-align: center;
+    padding-top: 4px;
+    border-radius: 50%;
+}
+.fa-x:active{
+    background-color: rgb(255, 124, 124);
+}

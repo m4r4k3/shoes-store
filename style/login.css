@@ -1,0 +1,84 @@
+section{
+    height: 80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+article {
+    width: 300px;
+    height: 350px;
+    box-shadow:  0 0 1px black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+form{
+    display:flex;
+    flex-direction:column;
+    
+}
+.title{
+    font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Teko', sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+}
+.fa-user{
+
+    box-shadow: 0 0 1px black;
+    background-color:#2f8ed7;
+    border-radius: 50%;
+    color: white;
+    display: grid !important; ;
+    place-content: center;
+    width: 70px;
+    font-size: 20px;
+    height:70px;
+}
+label{
+    display: inline-block;
+    width: 100px;
+}
+#email , #password{
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 1px black;
+    margin-top: 10px;
+    height: 20px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+#submit{
+    align-self:center;
+    margin-top: 20px;
+    width: 80%;
+    border: 0;
+    background-color: #499FE9;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Teko', sans-serif;    color: white;
+    height: 30px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+#submit:active{
+    background-color: #7ac1ff;
+}
+.subform{
+    width: 100%;
+    padding-left:20px ;
+}
+.subform >* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: rgb(0, 106, 255);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 2px;
+    font-weight: 600;
+}

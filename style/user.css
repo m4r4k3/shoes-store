@@ -1,0 +1,114 @@
+
+form{
+    width: 100vw;
+    height: calc(100vh - 65px);
+    display: flex;
+    justify-content:center;
+    margin-top: 5px;
+    flex-wrap: wrap;
+    
+}
+.info1{
+    width: 25%;
+    position: relative;
+}
+#img{
+    height: 250px;
+}
+.imgdiv{
+    overflow: hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.fileinput{
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 250px;
+    height: 250px;
+    left: 0;
+}
+#imgInput{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 4;
+    opacity: 0;
+}
+.fileinput label{
+    color:white ;
+    font-size: 20px; 
+    font-weight: 900;
+    opacity: 0;
+    transition: 350ms ease-out;
+}
+.fileinput:hover label{
+    transition: 350ms ease-out;
+    opacity: 1;
+}
+.fileinput:hover{
+    background-color: rgba(0, 0, 0, 0.258);
+}
+
+
+.info2{
+    width: 25%;
+    height: 60%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+}
+.info2 label{
+    display: inline-block;
+    width: 100px;
+
+}
+.info2 input{
+    width: 50%;
+}
+.info2 div{
+    margin-bottom: 10px;
+}
+#bioText{
+    height: 200px;
+    outline: 0;
+    border: 0;
+    resize: none;
+    box-shadow: 0 0 5px black;
+    margin-top: 20px;
+    padding: 10px;
+}
+.buttons{
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.buttons > *{
+    width: 200px;
+    height: 40px;
+    outline: 0;
+    border:0 ;
+    font-weight: 900;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 40px;
+    box-shadow: 0 0 5px black;
+    color: white;
+}
+#cancel {
+    background-color:rgb(245, 72, 72) ;
+}
+#edit{
+    margin-left: 200px;
+background-color: rgb(40, 255, 40);
+}
