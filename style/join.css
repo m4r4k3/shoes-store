@@ -1,0 +1,58 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+   background-image: linear-gradient(90deg ,rgba(6, 193, 255, 0.778) , rgba(128, 0, 128, 0.755));
+}
+form{
+    display: flex;
+    background-image: url("https://media.discordapp.net/attachments/775448139938922540/1148005385857413200/image.png");
+    background-size: 30vh;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin: 30px auto  0 auto;
+    flex-direction: column;
+    width: 400px;
+    height: calc(100vh - 150px);
+    justify-content:space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(43, 180, 226, 0.121);
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.391) inset;
+    border-radius: 15px;
+}
+form div p{
+   width: 100px;
+   color: rgb(241, 239, 239);
+   display: inline-block;
+}
+input[type="text"]{
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 20px;
+    outline: none;
+}
+input[type="submit"]{
+    width:calc(100% - 50px);
+    padding: auto;
+    color: white;
+    background-image: linear-gradient(90deg , #2966A7 ,#3B4893);
+    border:0 ;
+    height: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 0 0px 20px rgba(255, 255, 255, 0.391);
+
+}
+
+input[type="submit"]:hover{
+    background-image: none;
+    transition: 350ms;
+    background-color: #7B4FD0 ;
+
+}

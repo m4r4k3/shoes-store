@@ -9,7 +9,7 @@
             <li><a href="./index.php">Store</a></li>
             <li><a href="./mycart.php">Mycart</a></li>
             <li>Wish List</li>
-            <li>about</li>
+            <li><a href="./join-us.php">Join Us</a></li>
             <li>
             <?php
             session_start() ;
