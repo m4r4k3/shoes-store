@@ -19,7 +19,7 @@
     <div><p>password:</p> <input type="text" name="password" id=""></div>
     <input type="submit" value="submit">
     <?php
-        if($_SERVER["REQUEST_METHOD"] == "POST"){
+        if( $_SERVER["REQUEST_METHOD"] == "POST" && filter_var($_POST["email"] ,FILTER_VALIDATE_EMAIL) && preg_match("/\b\d{7,15}\b/" , $_POST["phone"]) ){
             $db = new mysqli("localhost" ,"root","","ecom") ;
             $email =htmlentities($_POST['email']);
             $name =htmlentities($_POST["name"]) ;
@@ -27,11 +27,10 @@
             $phone =htmlentities($_POST['phone']);
             $store = htmlentities($_POST['store']);
             $city = htmlentities($_POST['city']);
-            $email = htmlentities($_POST['email']);
-            $pswd = htmlentities($_POST['password']);
+            $pswd = password_hash(htmlentities($_POST['password']) , PASSWORD_DEFAULT);
      
             $result = $db->query("select * from seller where email like '$email' or 
-            name like '$name' or nickname like '$Nname' or phone like '$phone'
+             phone like '$phone'
              or store like '$store' ") ;
         
               if ($result->num_rows >0)
@@ -43,7 +42,11 @@
              (name , nickname , email , phone , ville , password ,date,confirmed) values
              ('$name' , '$nickname' , '$email' , '$phone', '$city' , '$pswd' , curdate(),false);
              ");
-        header("location:./confirmSeller.php") ;
+            session_start();
+            $_SESSION["seller_id"]=$db->query("select id from seller where email like '$email'")->fetch_all(MYSQLI_ASSOC)[0];
+            print_r($db->query("select id from seller where email like '$email'")->fetch_all(MYSQLI_ASSOC)[0]);
+                require("./content/rest api/send email.php");
+                header("Location:./ConfirmSeller.php");
             }
         }
     ?>
