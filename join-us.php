@@ -37,16 +37,17 @@
               {
                  echo "<p style='color:red;'>sorry we already have a seller with the same informations</p>";
             }else{
-            
            $DataInsertfb = $db->query("insert into seller
              (name , nickname , email , phone , ville , password ,date,confirmed) values
              ('$name' , '$nickname' , '$email' , '$phone', '$city' , '$pswd' , curdate(),false);
              ");
             session_start();
-            $_SESSION["seller_id"]=$db->query("select id from seller where email like '$email'")->fetch_all(MYSQLI_ASSOC)[0];
-            print_r($db->query("select id from seller where email like '$email'")->fetch_all(MYSQLI_ASSOC)[0]);
-                require("./content/rest api/send email.php");
-                header("Location:./ConfirmSeller.php");
+            $_SESSION["seller_id"]=$db->query("select id from seller where email like '$email'")->fetch_all(MYSQLI_ASSOC)[0]["id"];
+            require("./content/rest api/send email.php");
+            define("REQUIRED",true);
+            session_set_cookie_params(120) ;
+            $_SESSION["conf_r"]=true ;
+            header("Location:./confirmSeller.php");
             }
         }
     ?>
