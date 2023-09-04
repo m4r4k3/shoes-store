@@ -1,12 +1,12 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer ;
 use PHPMailer\PHPMailer\Exception ;
-require "/opt/lampp/htdocs/p/my shop/.gitignore/PHPMailer/src/Exception.php";
-require "/opt/lampp/htdocs/p/my shop/.gitignore/PHPMailer/src/PHPMailer.php";
-require "/opt/lampp/htdocs/p/my shop/.gitignore//PHPMailer/src/SMTP.php" ;
-require '/opt/lampp/htdocs/p/my shop/.gitignore//vendor/autoload.php';
+require "/opt/lampp/htdocs/p/my shop/.ignore/PHPMailer/src/Exception.php";
+require "/opt/lampp/htdocs/p/my shop/.ignore/PHPMailer/src/PHPMailer.php";
+require "/opt/lampp/htdocs/p/my shop/.ignore//PHPMailer/src/SMTP.php" ;
+require '/opt/lampp/htdocs/p/my shop/.ignore//vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable("/opt/lampp/htdocs/p/my shop/.gitignore/");
+$dotenv = Dotenv\Dotenv::createImmutable("/opt/lampp/htdocs/p/my shop/.ignore/");
 $dotenv->load();
 
 $email = $_ENV["email"];
