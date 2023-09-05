@@ -26,11 +26,15 @@
             <?php 
             if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $db = new mysqli("localhost","root","",'ecom') ;
-                $code = $db->query("select cn from seller where id = {$_SESSION['seller_id']}")->fetch_all(MYSQLI_ASSOC);
+                $code = $db->query("select cn from seller where id = {$_SESSION['seller_id']}")->fetch_all(MYSQLI_ASSOC)[0]["cn"];
+               echo $_POST["code"] . "      " . $code ;
+               
                 if($_POST["code"] == $code){
-                    echo 1 ;
+                   if( $db->query("update seller set cn = null , confirmed= true")) {
+                    header("Location:./seller.php") ;
+                   };
                 }else{
-                    echo 0;
+                    header("Location:./not-found.html") ;
                 } ;
 
             }

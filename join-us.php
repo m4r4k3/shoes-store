@@ -16,7 +16,7 @@
     <div><p>your store name:</p> <input type="text" name="store" id=""></div>
     <div><p>city:</p> <input type="text" name="city" id=""></div>
     <div><p>email:</p> <input type="text" name="email" id=""></div>
-    <div><p>password:</p> <input type="text" name="password" id=""></div>
+    <div><p>password:</p> <input type="password" name="password" id=""></div>
     <input type="submit" value="submit">
     <?php
         if( $_SERVER["REQUEST_METHOD"] == "POST" && filter_var($_POST["email"] ,FILTER_VALIDATE_EMAIL) && preg_match("/\b\d{7,15}\b/" , $_POST["phone"]) ){
@@ -43,8 +43,8 @@
              ");
             session_start();
             $_SESSION["seller_id"]=$db->query("select id from seller where email like '$email'")->fetch_all(MYSQLI_ASSOC)[0]["id"];
-            require("./content/rest api/send email.php");
             define("REQUIRED",true);
+            require("./content/rest api/send email.php");
             session_set_cookie_params(120) ;
             $_SESSION["conf_r"]=true ;
             header("Location:./confirmSeller.php");
