@@ -25,6 +25,7 @@ async function fetchData() {
   let data = await response.json();
   for (i of data) {
     let isInCart =  await cartChecker(i["id"]) ;
+ 
     let disc =
     i["discount"] != 0 ? `<div id="dis"><p>${i["discount"]}</p></div>` : "";
     let image = "http://localhost/p/" + i.imgs;
@@ -98,7 +99,6 @@ async function  cartChecker(id){
     method:"post"
   }) ;
   let data = await req.json() ;
-  console.log(data)
   if(data.isEmpty){
     return false
   }

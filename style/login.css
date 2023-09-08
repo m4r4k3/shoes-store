@@ -82,3 +82,48 @@ label{
     margin-bottom: 2px;
     font-weight: 600;
 }
+#seller{
+    appearance: none;
+    width: 40px;
+    height: 20px;
+    border-radius: 40px;
+    box-shadow: 0 0 1px 1px black;
+    cursor:pointer ;
+    position: absolute;
+    z-index: 1;
+}
+.safter {
+    position: relative;
+    margin: 0 auto;
+    width: 40px;
+    height: 20px;
+    border-radius: 40px;
+}
+.safter::after{
+   content:"";
+   position: absolute;
+   width: 16px;
+   height:16px; 
+   border-radius: 50%; 
+   transition: linear 350ms ease-out;
+   box-shadow: 0 0 2px 1px black;
+   left:2px ;
+    top:2px;
+    background-color: rgb(65, 65, 65);
+}
+.safterC::after{
+    transform: translatex(110% );
+    background-color: #2f8ed7;
+    box-shadow: 0 0 2px 1px #2f8ed7;
+}
+
+.safter{
+    background-color: #f3f3f3;
+}
+.seller{
+    height: 30px;
+    width: 100%;
+    margin: 10px 0 0 0;
+   display: flex;
+   align-items: center;
+}
