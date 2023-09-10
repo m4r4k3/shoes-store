@@ -9,7 +9,7 @@
     height: 60px;
 }
 header{
-    background-color: #9BABBF;
+    background-color: #3f6492;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,11 +32,11 @@ header ul li {
     cursor:pointer;
     padding: 4px 10px;
     border-radius: 5px;
-    color:#484d4a ;
+    color:#ffffff ;
 }
 header ul li:hover{
-    background-color: #6c7682;
-    color :white ;
+    background-color: #ffffff73;
+    color :rgb(100, 100, 100) ;
     transition: 350ms ;
 }
 header li a {
